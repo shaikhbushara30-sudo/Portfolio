@@ -14,9 +14,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 <style>
-/* ============================================================
-   DESIGN TOKENS
-============================================================ */
 :root{
   --bg:            #07070d;
   --bg-elev:       #0d0f1b;
@@ -122,9 +119,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius:6px;
 }
 
-/* ============================================================
-   BACKDROP — grid + glow blobs + particle canvas
-============================================================ */
 .backdrop{
   position:fixed; inset:0;
   z-index:0;
@@ -160,9 +154,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 main{ position:relative; z-index:1; }
 
-/* ============================================================
-   LOADER
-============================================================ */
 #loader{
   position:fixed; inset:0; z-index:999;
   background:var(--bg);
@@ -196,9 +187,6 @@ main{ position:relative; z-index:1; }
   background:var(--grad);
 }
 
-/* ============================================================
-   CUSTOM CURSOR
-============================================================ */
 .cursor-dot, .cursor-ring{
   position:fixed; top:0; left:0;
   border-radius:50%;
@@ -221,10 +209,6 @@ main{ position:relative; z-index:1; }
 @media (hover:none), (pointer:coarse){
   .cursor-dot, .cursor-ring{ display:none; }
 }
-
-/* ============================================================
-   NAVBAR
-============================================================ */
 .navbar{
   position:fixed; top:18px; left:50%;
   transform:translateX(-50%);
@@ -328,9 +312,6 @@ main{ position:relative; z-index:1; }
   display:flex; align-items:center; justify-content:center;
 }
 
-/* ============================================================
-   BUTTONS
-============================================================ */
 .btn{
   position:relative;
   display:inline-flex; align-items:center; gap:10px;
@@ -371,9 +352,6 @@ main{ position:relative; z-index:1; }
 
 .btn-sm{ padding:11px 20px; font-size:13.5px; }
 
-/* ============================================================
-   HERO
-============================================================ */
 .hero{
   min-height:100vh;
   display:flex; align-items:center;
@@ -647,9 +625,6 @@ main{ position:relative; z-index:1; }
   border:1px solid var(--border); color:var(--text-dim);
 }
 
-/* ============================================================
-   SKILLS
-============================================================ */
 .skills-cat{ margin-bottom:44px; }
 .skills-cat:last-child{ margin-bottom:0; }
 .skills-cat h3{
@@ -744,9 +719,6 @@ main{ position:relative; z-index:1; }
 }
 .to-icon:hover .to-label{ opacity:1; }
 
-/* ============================================================
-   PROJECT (featured)
-============================================================ */
 .project-card{
   position:relative;
   padding:0;
@@ -813,9 +785,6 @@ main{ position:relative; z-index:1; }
 .project-tools{ font-size:13px; color:var(--muted); margin-top:auto; padding-top:18px; border-top:1px solid var(--border); }
 .project-tools strong{ color:var(--text-dim); font-weight:500; }
 
-/* ============================================================
-   EXPERIENCE / EDUCATION TIMELINE
-============================================================ */
 .timeline{ position:relative; padding-left:38px; }
 .timeline::before{
   content:'';
@@ -860,9 +829,7 @@ main{ position:relative; z-index:1; }
 .edu-card .school{ font-size:13px; color:var(--text-dim); margin-bottom:10px; }
 .edu-card .when{ font-family:var(--font-mono); font-size:11.5px; color:var(--muted); }
 
-/* ============================================================
-   CONTACT
-============================================================ */
+
 .contact-grid{
   display:grid; grid-template-columns:.9fr 1.1fr; gap:50px; align-items:start;
 }
@@ -920,9 +887,6 @@ main{ position:relative; z-index:1; }
 .form-note{ font-size:12.5px; color:var(--muted); margin-top:-8px; margin-bottom:20px; }
 .btn-submit{ width:100%; justify-content:center; }
 
-/* ============================================================
-   FOOTER
-============================================================ */
 footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
 .footer-row{
   display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;
@@ -946,7 +910,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
 .to-top:hover{ border-color:var(--accent-2); }
 .to-top svg{ width:18px; height:18px; }
 
-/* reveal utility (JS driven) */
+
 .reveal{ opacity:0; transform:translateY(28px); }
 
 @media (max-width:760px){
@@ -1011,7 +975,6 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
 
 <main>
 
-  <!-- ============ HERO ============ -->
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div class="hero-left">
@@ -1048,7 +1011,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
           <div class="ring ring-3"></div>
           <div class="photo-frame" id="photoFrame">
    
-           <img src=""./images/profile.jpg"" alt="Bushara Shaikh">
+           <img src=""./bushara.jpg"" alt="Bushara Shaikh">
               <defs>
                 <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0" stop-color="#7c5cff"/>
@@ -1071,7 +1034,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
     <div class="scroll-hint"><span>SCROLL</span><span class="line"></span></div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
+ 
   <section id="about">
     <div class="container">
       <div class="kicker">About</div>
@@ -1113,7 +1076,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
     </div>
   </section>
 
-  <!-- ============ SKILLS ============ -->
+ 
   <section id="skills">
     <div class="container">
       <div class="kicker">Skills</div>
@@ -1174,7 +1137,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
     </div>
   </section>
 
-  <!-- ============ TECH ORBIT ============ -->
+  
   <section class="tech-orbit-section" id="stack">
     <div class="container">
       <div class="kicker" style="justify-content:center;">The Stack</div>
@@ -1201,7 +1164,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
     </div>
   </section>
 
-  <!-- ============ PROJECTS ============ -->
+  
   <section id="projects">
     <div class="container">
       <div class="kicker">Selected Work</div>
@@ -1249,7 +1212,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
     </div>
   </section>
 
-  <!-- ============ EXPERIENCE ============ -->
+ 
   <section id="experience">
     <div class="container">
       <div class="kicker">Experience</div>
@@ -1287,7 +1250,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
     </div>
   </section>
 
-  <!-- ============ EDUCATION ============ -->
+  
   <section id="education">
     <div class="container">
       <div class="kicker">Education</div>
@@ -1318,7 +1281,7 @@ footer{ padding:50px 0 40px; border-top:1px solid var(--border); }
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
+  
   <section id="contact">
     <div class="container contact-grid">
       <div class="contact-left reveal">
@@ -1419,7 +1382,6 @@ function renderIcons(){
 }
 renderIcons();
 
-/* ---------------- Loader ---------------- */
 window.addEventListener('load', () => {
   const bar = document.getElementById('loaderProgress');
   gsap.to(bar, { width: '100%', duration: 1.1, ease: 'power2.inOut' });
@@ -1429,7 +1391,7 @@ window.addEventListener('load', () => {
   });
 });
 
-/* ---------------- Hero name split + intro ---------------- */
+
 function splitChars(el){
   const text = el.textContent;
   el.textContent = '';
@@ -1453,7 +1415,7 @@ function playHeroIntro(){
     .from('.hero-visual', { opacity: 0, scale: .9, duration: .9, ease: 'power3.out' }, '-=.9');
 }
 
-/* ---------------- Rotating role text ---------------- */
+
 const roles = ['Full Stack Developer', 'Backend-Focused Engineer', 'Node.js & Express Developer', 'MySQL & REST API Builder'];
 let roleIdx = 0;
 const roleEl = document.getElementById('roleText');
@@ -1485,7 +1447,7 @@ function eraseRole(){
 }
 setTimeout(typeRole, 1300);
 
-/* ---------------- Custom cursor ---------------- */
+
 const dot = document.getElementById('cursorDot');
 const ring = document.getElementById('cursorRing');
 let mx=innerWidth/2, my=innerHeight/2, rx=mx, ry=my;
@@ -1496,7 +1458,7 @@ document.querySelectorAll('[data-hover], a, button, .skill-card, .glass').forEac
   el.addEventListener('mouseleave', ()=>ring.classList.remove('is-active'));
 });
 
-/* ---------------- Particle canvas ---------------- */
+
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 let particles = [];
@@ -1527,7 +1489,7 @@ function drawParticles(){
 resizeCanvas(); initParticles(); drawParticles();
 window.addEventListener('resize', ()=>{ resizeCanvas(); initParticles(); });
 
-/* ---------------- Hero mouse parallax ---------------- */
+
 const orbitWrap = document.getElementById('orbitWrap');
 document.querySelector('.hero').addEventListener('mousemove', e=>{
   const r = document.querySelector('.hero').getBoundingClientRect();
@@ -1536,7 +1498,7 @@ document.querySelector('.hero').addEventListener('mousemove', e=>{
   gsap.to(orbitWrap, { x: px*24, y: py*24, rotateY: px*10, rotateX: -py*10, duration: .6, ease:'power2.out' });
 });
 
-/* ---------------- Tech orbit positioning ---------------- */
+
 document.querySelectorAll('#techOrbit .to-icon').forEach(icon=>{
   const r = parseFloat(icon.dataset.orbitR);
   const a = parseFloat(icon.dataset.orbitA);
@@ -1547,7 +1509,6 @@ document.querySelectorAll('#techOrbit .to-icon').forEach(icon=>{
 });
 gsap.to('#techOrbit .to-ring.r1', { rotate: 360, duration: 30, repeat:-1, ease:'none' });
 
-/* ---------------- Navbar scroll state + active link ---------------- */
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('[data-nav]');
 const navPill = document.getElementById('navPill');
@@ -1577,13 +1538,13 @@ function setActive(i){
   movePill(navLinks[i]);
 }
 
-/* ---------------- Mobile menu ---------------- */
+
 const mobileMenu = document.getElementById('mobileMenu');
 document.getElementById('navToggle').addEventListener('click', ()=> mobileMenu.classList.add('open'));
 document.getElementById('mobileClose').addEventListener('click', ()=> mobileMenu.classList.remove('open'));
 document.querySelectorAll('[data-nav-mobile]').forEach(a=> a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
 
-/* ---------------- Scroll reveal ---------------- */
+
 gsap.utils.toArray('.reveal').forEach(el=>{
   gsap.to(el, {
     opacity: 1, y: 0, duration: .9, ease: 'power3.out',
@@ -1596,7 +1557,7 @@ gsap.utils.toArray('.skill-card').forEach((el,i)=>{
     scrollTrigger:{ trigger: el, start:'top 92%' } });
 });
 
-/* ---------------- Skill card cursor glow ---------------- */
+
 document.querySelectorAll('.skill-card').forEach(card=>{
   card.addEventListener('mousemove', e=>{
     const r = card.getBoundingClientRect();
@@ -1605,7 +1566,7 @@ document.querySelectorAll('.skill-card').forEach(card=>{
   });
 });
 
-/* ---------------- 3D tilt on project card ---------------- */
+
 document.querySelectorAll('[data-tilt-card]').forEach(card=>{
   card.addEventListener('mousemove', e=>{
     const r = card.getBoundingClientRect();
@@ -1616,10 +1577,10 @@ document.querySelectorAll('[data-tilt-card]').forEach(card=>{
   card.addEventListener('mouseleave', ()=> gsap.to(card, { rotateY:0, rotateX:0, duration:.6, ease:'power3.out' }));
 });
 
-/* ---------------- Back to top ---------------- */
+
 document.getElementById('toTop').addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
 
-/* ---------------- Contact form -> mailto ---------------- */
+
 document.getElementById('contactForm').addEventListener('submit', function(e){
   e.preventDefault();
   const name = document.getElementById('cf-name').value;
